@@ -15,13 +15,14 @@ public class ArriendoLocalComercial extends Arriendo {
 
     protected double valorAdicionalFijo;
 
-    public ArriendoLocalComercial(String nombre, double cuotaB) {
+    public ArriendoLocalComercial(String nombre, double cuotaB) { 
+        // pasarela de la subaClase hasta el constructor de la SuperClase
         super(nombre, cuotaB);
     }
 
     @Override
     public void establecerNombreArrendatario(String nombre) {
-        nombreArrendatario = nombre.toUpperCase();
+        nombreArrendatario = nombre.toUpperCase(); // se esta personalizando (opcional en funcion del contexto)
     }
 
     public void establecerValorAdicionalFijo(double x) {

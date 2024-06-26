@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete1;
 
 import paquete3.ArriendoLocalComercial;
@@ -10,10 +5,6 @@ import paquete3.ArriendoLocalComida;
 import paquete3.ArriendoLocalSesiones;
 import java.util.ArrayList;
 import paquete2.Arriendo;
-/**
- *
- * @author reroes
- */
 public class Ejecutor {
     
     public static void main(String[] args) {
@@ -29,8 +20,6 @@ public class Ejecutor {
         ArriendoLocalComida arriendoComida2 = new ArriendoLocalComida(
                 "Christian Cruz", 300, 10, 20.2, 40.2);
         
-        
-        
         ArriendoLocalComercial arriendoComercial = new ArriendoLocalComercial(
                 "Andrew Schroeder", 400);
         arriendoComercial.establecerValorAdicionalFijo(100); // en $
@@ -42,11 +31,16 @@ public class Ejecutor {
         
         listaArriendos.add(arriendoComida);
         listaArriendos.add(arriendoComercial);
+        listaArriendos.add(arriendoComida2);
         listaArriendos.add(arriendoSesiones);
         
         for (int i = 0; i < listaArriendos.size(); i++) {
             listaArriendos.get(i).establecerArriendoMensual(); // se llama al 
-                                                            // métodos abstracto
+            // métodos abstracto
+            /*
+                se esta recorriendo una subClase de tipo arriendo
+            */
+                                                            
             System.out.println(listaArriendos.get(i));
             System.out.println();
         }
